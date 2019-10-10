@@ -1,0 +1,72 @@
+Caladis -- A Probabilistic Calculator
+-------------------------------------
+www.caladis.org
+
+Johnston, I. G., Rickett, B. C., and Jones, N. S., Explicit tracking of uncertainty increases the power of quantitative rule-of-thumb reasoning in cell biology, [PLACEHOLDER -- CITATION DETAILS]
+Contact: contact@caladis.org
+
+Copyright (C) 2014 Systems & Signals Research Group, Imperial College London
+Released as free software under GNU GPL 3.0 http://www.gnu.org/licenses/ ; see readme.txt
+Please cite the accompanying paper [see readme.txt] if using this code or this tool in a publication.
+
+This file contains a brief description of all the files involved in this source code package. Important introductory information is contained in readme.txt .
+
+readme.txt
+  Introduction, implementation instructions, notes, and citations
+file_index.txt
+  This file
+
+Website/index.php
+  Caladis home page, containing structure of input screen and options for input and calculation
+Website/elements/head.php
+  Head for home page including invocation of Javascript files
+Website/elements/header.php
+Website/elements/footer.php
+  Header and footer for home page  
+Website/tutorial/index.php
+  Tutorial page
+Website/media/css/style.css
+Website/media/css/structure.css
+Website/media/css/util.css
+  Style sheets for features of the website
+Website/compute/index.php
+Website/compute/ajax.php
+  Scripts to set up the Caladis output page, including its structure and initiating the required calculation
+Website/lib/getdata.php
+Website/lib/listget.php
+Website/lib/listsearch.php
+  Scripts which query the Bionumbers database to populate Bionumber distributions and aspects of the Bionumbers browser (lists and searches)
+Website/lib/bins.class.php
+Website/lib/build.class.php
+  Construct the dynamic elements for the output page and the bins of the output histogram
+Website/lib/data.class.php
+  Calculates the output of the required calculation
+Website/lib/download.class.php
+Website/lib/log.class.php
+  Log and facilitate downloading of the calculation
+Website/lib/random.class.php
+Website/lib/util.php
+  Compute random numbers and perform mathematical and statistical tasks
+Website/media/js/global.js
+  Miscellaneous global functions including distribution descriptions and searches
+Website/media/js/indexscreen.js
+  Controls aspects of the home page front end and Bionumbers browser
+Website/media/js/menu.js
+Website/media/js/slider.js
+Website/media/js/tooltip.js
+  Miscellaneous graphical features of the front end
+Website/media/js/thirdparty/*
+Website/media/js/iphone/*
+  Third-party code to facilitate dynamic aspects of the front end and iPhone interactivity (see individual files for more detail)
+Website/media/img/*
+  Images involved in the website front end
+Website/download/
+  An empty subdirectory that will store data to be downloaded from the website
+
+Bionumbers/parsescr.sh
+  Bash script to parse downloaded data from the Bionumbers website http://bionumbers.hms.harvard.edu/ into a PHP script to populate an SQL database
+Bionumbers/dodgychars.sh
+  Used by parsescr.sh to replace awkward characters from the source data
+Bionumbers/builddb.php
+  The PHP script resulting from this process [see readme.txt] that populates the Caladis Bionumber distribution website
+

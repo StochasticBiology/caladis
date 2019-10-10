@@ -1,0 +1,104 @@
+/*
+ *  HTML, Body style sheet
+ */
+
+/* Copyright (C) 2014 Systems & Signals Research Group, Imperial College London
+Released as free software under GNU GPL 3.0 http://www.gnu.org/licenses/ ; see readme.txt
+Please cite the accompanying paper [see readme.txt] if using this code or this tool in a publication. */
+
+html, body{
+    padding: 0; margin: 0;
+}
+
+
+
+/*
+ * Container & Cols
+ */
+.container{
+    width: 1000px;
+    margin: 0 auto; padding: 0 20px;
+}
+.container:after{
+    visibility: hidden; display: block; clear: both; content: " ";
+    height: 0;
+    font-size: 0;
+}
+* html .container{ zoom: 1; } /* IE6 */
+*:first-child+html .container{ zoom: 1; } /* IE7 */
+
+.col-left{
+    float: left;
+    width: 490px;
+    padding: 0 10px 0 0;
+}
+
+.col-left-one{
+    float: left;
+    width: 235px;
+    padding: 0 10px 0 0;
+}
+
+.col-left-two{
+    float: left;
+    width: 235px;
+    padding: 0 10px 0;
+}
+
+.col-right{
+    float: right;
+    width: 490px;
+    padding: 0 0 0 10px;
+}
+
+.col-menu{
+    float: left;
+    width: 200px;
+    padding: 20px 20px 0 0;
+}
+
+.col-main{
+    float: right;
+    width: 760px; min-height: 400px;
+    padding: 20px 0 0 19px;
+    border-left: 1px solid #DDD;
+    -webkit-box-shadow: -1px 0 0 rgba(255,255,255,0.9);
+       -moz-box-shadow: -1px 0 0 rgba(255,255,255,0.9);
+            box-shadow: -1px 0 0 rgba(255,255,255,0.9);
+}
+
+
+/* dynamic width */
+@media( min-width: 1190px){ 
+    .container{ width: 1150px; } 
+    .col-left, .col-right{ width: 565px; } 
+    .col-left-one, .col-left-two{ width: 272px; } 
+    .col-menu{ width: 200px; } 
+    .col-main{ width: 910px; } 
+
+}
+
+@media( min-width: 890px) and ( max-width: 1040px){ 
+    .container{ width: 850px; } 
+    .col-left, .col-right{ width: 415px; }
+    .col-left-one, .col-left-two{ width: 197px; } 
+    .col-menu{ width: 200px; } 
+    .col-main{ width: 610px; } 
+}
+
+@media( min-width: 740px) and ( max-width: 890px){ 
+    .container{ width: 700px; }
+    .col-left, .col-right{ width: 340px; }
+    .col-left-one, .col-left-two{ width: 160px; } 
+    .col-menu{ width: 150px; }
+    .col-main{ width: 510px; }
+}
+
+@media( max-width: 740px){ 
+    .container{ width: auto; }
+    .wide-only{ display: none; }
+    .col-left, .col-left-one, .col-left-two, .col-right{ float: none; width: auto; padding: 0;}
+    .col-menu{ float: none; width: auto; padding: 20px 0 0; }
+    .col-main{ float: none; width: auto; padding: 40px 0 0; border: none; -webkit-box-shadow: none; -moz-box-shadow: none; box-shadow: none; }
+}
+
